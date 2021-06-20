@@ -12,20 +12,21 @@ body,
 .h5 {
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
+    /* không set font size cho cả 3 thẻ kiểu này */
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
     src: url(https://example.com/MaterialIcons-Regular.eot);
-    /* For IE6-8 */
     src: local('Material Icons'),
         local('MaterialIcons-Regular'),
         url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
         url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
         url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
+} */
+/* Dùng google font */
 
 .material-icons {
     font-family: 'Material Icons';
@@ -128,14 +129,19 @@ header {
     padding-bottom: 0.8em;
     margin: 0px;
 }
-
+.header-bottom .navbar-nav>li{
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+}
 .header-bottom .navbar {
     padding: 0;
-    margin: 0 0 0 0.7em;
+    /* margin: 0 0 0 0.7em;??? */
+    /* navbar có background trải dài ko để margin 0.7em */
 }
 
 .navbar-header .navbar-brand {
-    margin-left: -50px;
+    /* margin-left: -50px; ??? */
     padding: 0;
     text-transform: uppercase;
 }
@@ -186,22 +192,22 @@ header {
     position: relative;
 }
 
-.navbar-nav .nav-item.active {
+/* .navbar-nav .nav-item.active {
     border-bottom: 2px solid #FF4F81;
-}
+} */
 
-.navbar-nav .nav-item.active .nav-link {
+.header__main-menu .nav-link:active {
     color: #FF4F81;
 }
 
-.navbar-collapse .navbar-nav .nav-link::after {
+.header__main-menu .nav-link::after {
     content: '';
-    width: 0%;
+    width: 0;
     border-bottom: 2px solid #FF4F81;
-
     position: absolute;
     bottom: 0;
     left: -1px;
+    transition: all .5s;
 }
 
 .caret {
@@ -215,16 +221,15 @@ header {
     border-left: 4px solid transparent;
 }
 
-.navbar-collapse .navbar-nav .nav-link:hover,
-.navbar-collapse .navbar-nav .show>.nav-link {
+/* .navbar-nav .nav-link:hover,
+.navbar-nav .show>.nav-link {
     color: #FF4F81;
     z-index: 1;
-}
+} */
 
-.navbar-collapse .navbar-nav .nav-link:hover:after {
-    z-index: -10;
-    animation: fillBorder 0.5s forwards;
-
+.nav-link:hover::after,
+.header__main-menu .nav-link.active::after {
+    width: 100%;
 }
 
 @keyframes fillBorder {

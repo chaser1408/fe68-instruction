@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
+    <!-- để không đúng đường dẫn, phải down thư viện về bỏ trong thư mục, xem lại a đã fix -->
+    <link rel="stylesheet" href="../plugin/OwlCarousel2-2.3.4/scss/owl.carousel.css">
+    <link rel="stylesheet" href="../plugin/OwlCarousel2-2.3.4/scss/owl.theme.default.css">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -71,9 +74,9 @@
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">HOME</a>
+                        <ul class="navbar-nav header__main-menu">
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">ABOUT</a>
@@ -307,7 +310,7 @@
     </div>
 
     <!-- TESTIMONIALS-->
-    <!-- <div class="test">
+    <div class="test">
         <div class="test-content">
             <div class="text-title">
                 <h3>TESTIMONIALS</h3>
@@ -334,7 +337,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- NEW -->
     <div class="new text-center">
@@ -453,48 +456,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
 
-
+<!-- JQUERY WAYPOINT -->
+<script src="../plugin/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.waypoints.min.js"></script>
+<script src="../plugin/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js" ></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
     <!-- JQUERY COUNTER-UP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script> -->
 
-    <!-- JQUERY WAYPOINT -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    
     <!-- <script src="jquery.counterup.min.js"></script> -->
-
     <!-- COUNTER -->
     <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                600: {
-                    items: 3,
-                    nav: false
-                },
-                1000: {
-                    items: 5,
-                    nav: true,
-                    loop: false
-                }
-            }
-        })
+        $('.counter').countUp();
     </script>
 
     <!-- OWL CAROUSEL -->
     <!-- <script src="jquery.min.js"></script> -->
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- CAROUSEL -->
+    <!-- <script src="owlcarousel/owl.carousel.min.js"></script> -->
+    <!-- Không đúng đường dẫn cái này luôn, down trên trang chủ, đã fix bên dưới -->
+    <script src="../plugin/OwlCarousel2-2.3.4/js/owl.carousel.js"></script>
     <script>
-
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
-
                 autoPlay: 3000, //Set AutoPlay to 3 seconds
                 autoPlay: true,
                 items: 3,
@@ -503,7 +486,6 @@
 
             });
         });
-
     </script>
 
 </body>
